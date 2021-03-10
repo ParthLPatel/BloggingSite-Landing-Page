@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/*nav layout*/
+header{
+    text-align: center;
+    background-color: #f8f8f8;
+}
+.container-nav{
+    display: flex;
+    flex-direction: column;
+}
+.site-title{
+    padding: 1em 0;
+}
+.site-title h1{
+    color: #143774;
+    font-size: 2rem;
+    font-family: 'Lora', serif;
+}
+.site-title p{
+    color: #1792d2;
+    margin-top: 0.4em;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.nav-list{
+    /* border: 1px solid black; */
+    margin: 0 2em;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+.nav-list li{
+    /* border: 1px solid green; */
+    margin: 0.5em 0;
+}
+.nav-list a{
+    /* border: 1px solid orange; */
+    color: #717171;
+    font-weight: 700;
+    text-decoration: none;
+}
+.nav-list a:hover, 
+.nav-list a:focus{
+    color: #1792d2;
+}
+.current-page{
+    border-bottom: 2px solid #717171;
+    padding-bottom: 0.2em;
+}
+.current-page:hover{
+    color: #1792d2;
+    border-bottom: 0px;
+}
+/*nav layout complete*/
+
+/* container layout*/
+.container{
+    margin: 2em 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+/*by default img tags have display=inline*/
+img{
+    max-width: 100%;
+    display: block;
+}
+
+hr{
+    margin: 1em 0;
+}
+
+/*featured and recent article common classes layout*/
+.article-title{
+    color: #143774;
+    font-size: 1.5rem;
+    font-family: 'Lora', serif;
+}
+.article-image{
+    margin: 0.8em 0;
+}
+.article-info{
+    color: #707070;
+    text-align: left;
+}
+.article-body{
+    color: #717171;
+    font-size: 1.2rem;
+    margin: 1em 0;
+    text-align: justify;
+}
+.article-read-more{
+    color: #1792d2;
+    font-weight: 700;
+    text-decoration: none;
+    
+}
+/*featured and recent article common classes layout complete*/
+
+/* article recent layout*/
+.article-recent{
+    display:flex;
+    flex-direction: column;
+    margin: 0.5em 0;
+}
+.article-recent-main{
+    padding: 1em 0;
+    order: 2;
+}
+.article-recent-secondary{
+    order:1;
+}
+/* article recent layout complete*/
+
+/*sidebar layout*/
+.sidebar-widjet{
+    border: 15px solid #ebebeb;
+    padding: 0.5em;
+    margin: 2em auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.widget-body{
+    font-size: 1.2rem;
+    color: #717171;
+}
+
+/*commong fields in sidebar widgets*/
+.widjet-title{
+    font-family: 'Lora', serif;
+    color: #143774;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.sidebar-widjet img{
+    width: auto;
+    max-width: 100%;
+    padding: 1em 0;
+}
+/*commong fields in sidebar widgets complete*/
+
+.widjet-recent-post{
+    margin: 1em 0;
+}
+.widjet-recent-post-title{
+    font-family: 'Lora', serif;
+    color: #143774;
+    font-size: 1.1rem;
+
+}
+/*sidebar layout complete*/
+
+
+/* footer*/
+footer{
+    background-color: #143774;
+    padding: 1.5em 0;
+}
+.footer-main-content{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ebebeb;
+    padding: 0.25em 0;
+}
+.footer-secondary-content{
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ebebeb;
+    padding: 0.25em 0;
+}
+
+/* container layout*/
+
+
+/* Media Queries */
+
+/*for Tablets */
+@media screen and (min-width:500px) and (max-width:992px){
+    .container{
+        padding: 3em;
+        margin: 2em;
+    }
+}
+
+/*for laptops/desktops*/
+@media screen and (min-width:993px){
+    /*design for website*/
+
+    /*Navigation*/
+    .container-nav{
+        /* border: 1px solid black; */
+        padding: 1em 8em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .site-title{
+        /* border: 1px solid  black; */
+        padding: 0;
+    }
+    .nav-list{
+        flex-direction: row;
+        /* border: 1px solid black; */
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .nav-list li{
+        /* border: 1px solid orange; */
+        font-size: 1.1rem;
+        margin: 0 1em;
+    }
+    /*Navigation Complete*/
+
+    /*Container Layout*/
+    .container{
+        /* border: 1px solid black; */
+        margin: 2.5em 8em;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 0.5em;
+    }   
+    .container main{
+        margin: 1em 0.5em;
+    }
+
+    .article-featured img{
+        width: auto;
+        max-width: 100%;
+    }
+
+    .article-recent{
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+    }
+
+    .article-recent-main{
+        width: auto;
+        max-width: 55%;
+        padding: 1em;
+    }
+    .article-recent-secondary{
+        width: auto;
+        max-width: 45%;
+    }
+    .sidebar{
+        margin: 1em 0.5em;
+        padding: 0.7em 0;
+    }
+}
